@@ -27,3 +27,4 @@ export function buildWebpackConfig(
     devServer: isDev ? buildDevServer(options) : undefined,
   };
 }
+
