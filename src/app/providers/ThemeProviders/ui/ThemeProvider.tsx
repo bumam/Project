@@ -3,12 +3,12 @@ import {
   LOCAL_STORAGE_THEME_KEY,
   ThemeContext,
   ThemeEnum,
-} from "./ThemeContext";
+} from "app/providers/ThemeProviders/lib/ThemeContext";
 
 const defaultTheme: ThemeEnum =
   (localStorage.getItem(LOCAL_STORAGE_THEME_KEY) as ThemeEnum) ||
   ThemeEnum.LIGHT;
-const ThemeProvider: FC = ({ children }) => {
+export const ThemeProvider: FC = ({ children }) => {
   const [theme, setTheme] = useState<ThemeEnum>(defaultTheme);
 
   const defaultProps = useMemo(
@@ -25,5 +25,3 @@ const ThemeProvider: FC = ({ children }) => {
     </ThemeContext.Provider>
   );
 };
-
-export default ThemeProvider;
