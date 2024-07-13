@@ -7,7 +7,7 @@
     "start": "webpack serve --env port=3000",
     "build:prod": "webpack serve --env mode=production",
     "build:dev": "webpack serve --env mode=development",
-    "lint": `eslint '**/*.{ts,tsx}' --fix`
+    "lint": "eslint '**/*.{ts,tsx}' --fix"
   },
   "repository": {
     "type": "git",
